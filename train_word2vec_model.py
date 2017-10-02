@@ -23,7 +23,7 @@ if __name__ == '__main__':
         sys.exit(1)
     inp, outp1, outp2 = sys.argv[1:4]
 
-    model = Word2Vec(LineSentence(inp),sg=1, size=400, window=5, min_count=5,iter=5,
+    model = Word2Vec(LineSentence(inp),sg=1, size=300, window=5, min_count=5,iter=5,
             workers=multiprocessing.cpu_count())
 
     # trim unneeded model memory = use(much) less RAM
